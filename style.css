@@ -1,32 +1,58 @@
+/* General styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    background-color: #f4f4f4;
+    /* margin-bottom: 60px; Adjust based on footer height */
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    display: flex
+;
+    flex-direction: row;
     align-items: center;
-    padding: 20px;
-    background: #333;
-    color: white;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-content: center;
 }
+
+/* 
+header .logo {
+    width: 50px;
+    height: 50px;
+} */
 
 nav ul {
     list-style: none;
     display: flex;
     gap: 15px;
+    justify-content: center;
+    padding: 0;
 }
-.logo img{
-    width: 20px;
-    height: 20px;
+
+nav ul li {
+    display: inline;
 }
-nav a {
-    color: white;
+
+nav ul li a {
+    color: #fff;
     text-decoration: none;
     font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #007BFF;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
 }
 
 .hero {
@@ -34,6 +60,16 @@ nav a {
     padding: 50px;
     background: url('image/2024-11-17_22-26-50-530.BMP') no-repeat center center/cover;
     color: white;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .btn {
@@ -44,135 +80,82 @@ nav a {
     text-decoration: none;
     margin-top: 20px;
     border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #0056b3;
 }
 
 .about, .projects, .certificates {
     padding: 50px;
-    text-align: center;
-    background: #f8f8f8;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-.about img {
-    /* border-radius: 50%; */
-    /* position: relative; */
-    max-width: 50%;
-    height: auto;
-}
-    
-
-.project-list, .certificate-gallery {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-top: 20px;
-}
-
-.project, .certificate {
-    background: white;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    width: 250px;
-    text-align: center;
-}
-/* secvice section css  start*/
-.services {
-    background-color: #f4f4f4;
-    padding: 50px 0;
-}
-.services h2 {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 2.5em;
-}
-
-.service img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
-.service-items {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-.service {
     background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    width: 30%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+    animation: slideIn 1s ease-in-out;
+}
+
+.about{
+    background: url('image/2024-11-17_22-26-50-530.BMP') no-repeat center center/cover;
+    color: white;
+    max-width: 100% !important;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.about h2, .projects h2, .certificates h2 {
     text-align: center;
 }
-.service h3 {
-    font-size: 1.5em;
-    margin-bottom: 15px;
-}
-.service p {
-    font-size: 1em;
-    color: #666;
-}
-/* service section css end */
-
-.certificate img {
-    width: 100%;
-    border-radius: 5px;
-}
-.contact {
-    max-width: 600px;
-    margin: 20px auto;
+.service-text {
+    text-align: center;
     padding: 20px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 800px;
+    animation: slideIn 1s ease-in-out;
 }
-
-.contact h1 {
-    margin-top: 0;
-}
-
-.contact form {
+.about-content, .service-items {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
-.contact label {
-    margin: 10px 0 5px;
+.about-content div, .service {
+    flex: 1;
+    margin: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.contact input,
-.contact textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 100%;
-    box-sizing: border-box;
+.about-content div:hover, .service:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.contact button {
+.about-content img, .service img {
+    max-width: 100%;
+    height: auto;
     margin-top: 10px;
-    padding: 10px;
-    border: none;
     border-radius: 5px;
-    background-color: #333;
-    color: #fff;
-    cursor: pointer;
-}
-
-.contact button:hover {
-    background-color: #555;
 }
 
 footer {
-    background: #333;
-    color: white;
+    background-color: #333;
+    color: #fff;
     text-align: center;
     padding: 20px;
-    margin-top: 30px;
+    /* position: fixed; */
+    width: auto;
+    bottom: 0;
 }
