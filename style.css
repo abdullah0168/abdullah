@@ -19,7 +19,10 @@ nav ul {
     display: flex;
     gap: 15px;
 }
-
+.logo img{
+    width: 20px;
+    height: 20px;
+}
 nav a {
     color: white;
     text-decoration: none;
@@ -29,7 +32,7 @@ nav a {
 .hero {
     text-align: center;
     padding: 50px;
-    background: url('hero-bg.jpg') no-repeat center center/cover;
+    background: url('image/2024-11-17_22-26-50-530.BMP') no-repeat center center/cover;
     color: white;
 }
 
@@ -43,13 +46,24 @@ nav a {
     border-radius: 5px;
 }
 
-.about, .services, .projects, .certificates {
+.about, .projects, .certificates {
     padding: 50px;
     text-align: center;
     background: #f8f8f8;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
+.about img {
+    /* border-radius: 50%; */
+    /* position: relative; */
+    max-width: 50%;
+    height: auto;
+}
+    
 
-.service-items, .project-list, .certificate-gallery {
+.project-list, .certificate-gallery {
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -57,7 +71,7 @@ nav a {
     margin-top: 20px;
 }
 
-.service, .project, .certificate {
+.project, .certificate {
     background: white;
     padding: 15px;
     border-radius: 10px;
@@ -65,6 +79,47 @@ nav a {
     width: 250px;
     text-align: center;
 }
+/* secvice section css  start*/
+.services {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+}
+.services h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+}
+
+.service img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.service-items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.service {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: center;
+}
+.service h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+.service p {
+    font-size: 1em;
+    color: #666;
+}
+/* service section css end */
 
 .certificate img {
     width: 100%;
