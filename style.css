@@ -3,10 +3,14 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    /* background-color: #f4f4f4; */
+    background: url(image/2024-11-17_22-26-50-530.BMP) no-repeat center center/cover;
     /* margin-bottom: 60px; Adjust based on footer height */
 }
-
+html {
+    scroll-behavior: smooth;
+    
+}
 header {
     background-color: #333;
     color: #fff;
@@ -190,9 +194,9 @@ footer {
     background-color: #d62976;
     transition-duration: .3s; */
   /* } */
-  /* twitter*/
+  /* Github*/
   .containerTwo:hover {
-    background-color: #00acee;
+    background-color: #bec2c3;
     transition-duration: .3s;
   }
   /* linkdin*/
